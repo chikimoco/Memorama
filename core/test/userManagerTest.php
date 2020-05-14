@@ -159,7 +159,7 @@ class userManagerTest extends TestCase {
         $dbManagerMock = $this->getDataBaseManagerInsertMock($query);
         $usuarioManager = new userManager($dbManagerMock);
         $result = $usuarioManager->setUser($name, $password, $type);
-        $this->assertEquals("a", $result);
+        $this->assertEquals("", $result);
     }
 
     public function testSetUserWhenIsIncorrect() {
